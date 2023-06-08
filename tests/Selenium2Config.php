@@ -17,7 +17,7 @@ class Selenium2Config extends AbstractConfig
      */
     public function createDriver()
     {
-        $browser = getenv('WEB_FIXTURES_BROWSER') ?: 'firefox';
+        $browser = getenv('WEB_FIXTURES_BROWSER') ?: 'chrome';
         $seleniumHost = $_SERVER['DRIVER_URL'];
 
         return new Selenium2Driver($browser, null, $seleniumHost);
