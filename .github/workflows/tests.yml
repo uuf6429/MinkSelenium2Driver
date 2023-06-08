@@ -47,7 +47,7 @@ jobs:
 
       - name: Start Selenium
         run: |
-          docker run --net host --name selenium --volume /dev/shm:/dev/shm --shm-size 2g selenium/standalone-firefox:2.53.1 &> ./logs/selenium.log &
+          docker run --net host --name selenium --volume /dev/shm:/dev/shm --shm-size 2g selenium/standalone-chrome:2.53.1 &> ./logs/selenium.log &
 
       - name: Wait for browser & PHP to start
         run: |
